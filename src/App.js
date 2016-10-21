@@ -41,7 +41,7 @@ class App extends Component {
     };
 
 
-    fetch('http://localhost:8080/api/GetCaptcha', options)
+    fetch('/api/GetCaptcha', options)
       .then(response => {
         console.log('response', response);
         this.setState({
@@ -77,7 +77,7 @@ class App extends Component {
       headers: myHeaders,
     };
 
-    fetch('http://localhost:8080/api/SendMessage', options)
+    fetch('/api/SendMessage', options)
       .then(response => {
         console.log('response statusCode', response.status);
         this.setState({ statusCode: response.status });
